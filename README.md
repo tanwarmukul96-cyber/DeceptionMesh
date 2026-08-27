@@ -76,27 +76,44 @@ Behaviour Analysis
 Deception Technology
 Git & GitHub
 
+
 ## Running the Project
-Create and activate a virtual environment:
 
+### 1. Create a virtual environment
+
+```bash
 python -m venv venv
+```
 
-Activate on Windows:
+### 2. Activate the virtual environment
 
+**Windows:**
+
+```powershell
 .\venv\Scripts\Activate.ps1
+```
 
-Install dependencies:
+### 3. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-Run the main application:
+### 4. Run the main application
 
+```bash
 python main.py
+```
 
-Run the pipeline:
+### 5. Run the pipeline tests
 
+```bash
 python -m tests.test_pipeline
+```
 
-Run the adaptation loop:
+### 6. Run the adaptation loop tests
 
+```bash
 python -m tests.test_adaptation_loop
+```
+
