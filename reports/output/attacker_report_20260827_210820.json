@@ -1,0 +1,88 @@
+{
+    "report_type": "DeceptionMesh Attacker Intelligence Report",
+    "generated_at": "2026-08-27T21:08:20.441354",
+    "attacker_profile": {
+        "behaviour": "deep_interaction",
+        "event_count": 4,
+        "interaction_depth": 4,
+        "tools_observed": {
+            "ssh": 4
+        }
+    },
+    "deception_dna": {
+        "total_events": 4,
+        "action_pattern": {
+            "connection_attempt": 1,
+            "identification_received": 1,
+            "credential_probe": 1,
+            "resource_access": 1
+        },
+        "decoys_interacted": {
+            "fake-ssh": 2,
+            "fake-admin": 1,
+            "fake-backup": 1
+        },
+        "tools_observed": {
+            "ssh": 4
+        },
+        "max_interaction_depth": 4,
+        "risk": {
+            "risk_score": 100,
+            "risk_level": "CRITICAL",
+            "confidence_score": 100
+        }
+    },
+    "risk_assessment": {
+        "risk_score": 100,
+        "risk_level": "CRITICAL",
+        "confidence_score": 100
+    },
+    "attack_timeline": [
+        {
+            "event_id": "evt-001",
+            "source_ip": "127.0.0.1",
+            "decoy": "fake-ssh",
+            "action": "connection_attempt",
+            "tool": "ssh",
+            "interaction_depth": 1,
+            "success": true
+        },
+        {
+            "event_id": "evt-002",
+            "source_ip": "127.0.0.1",
+            "decoy": "fake-ssh",
+            "action": "identification_received",
+            "tool": "ssh",
+            "interaction_depth": 2,
+            "success": true
+        },
+        {
+            "event_id": "evt-003",
+            "source_ip": "127.0.0.1",
+            "decoy": "fake-admin",
+            "action": "credential_probe",
+            "tool": "ssh",
+            "interaction_depth": 3,
+            "success": false
+        },
+        {
+            "event_id": "evt-004",
+            "source_ip": "127.0.0.1",
+            "decoy": "fake-backup",
+            "action": "resource_access",
+            "tool": "ssh",
+            "interaction_depth": 4,
+            "success": true
+        }
+    ],
+    "adaptation": {
+        "action": "increase_decoy_depth",
+        "reason": "High-risk deep interaction detected",
+        "target": "advanced-decoy"
+    },
+    "investigation_summary": "Observed activity indicates potentially malicious interaction with the deception environment. Behavioural evidence and interaction depth should be investigated further.",
+    "mitre_attack_mapping": [
+        "T1021 - Remote Services",
+        "T1078 - Valid Accounts"
+    ]
+}
