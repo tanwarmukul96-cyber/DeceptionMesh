@@ -1,8 +1,8 @@
-# 🛡️ DeceptionMesh
+#  DeceptionMesh
 
 An adaptive cybersecurity deception framework designed to detect attacker behaviour, analyze interaction patterns, and dynamically evolve deception mechanisms.
 
-## 🚀 Overview
+##  Overview
 
 DeceptionMesh is a modular cybersecurity project that simulates a defensive deception environment.
 
@@ -15,7 +15,7 @@ The system:
 - Maintains mutation history
 - Generates attacker intelligence reports
 
-## 🧠 Architecture
+##  Architecture
 
 DeceptionMesh is organized into modular components:
 
@@ -28,7 +28,7 @@ DeceptionMesh is organized into modular components:
 - `reports/` — Generated intelligence reports
 - `tests/` — Pipeline and adaptation tests
 
-## 🔄 Adaptive Deception Loop
+##  Adaptive Deception Loop
 
 ```text
 Attacker Interaction
